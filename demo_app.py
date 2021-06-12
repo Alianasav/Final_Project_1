@@ -83,7 +83,7 @@ with st.echo(code_location='below'):
         columns=['max', 'min', 'mean', 'median'])
     st.dataframe(df_totals)
 
-    st.header('Визуфлизируем данные')
+    st.header('Визуализируем данные')
     df_smal = pd.DataFrame(
         [df1['price'], df1['price_per_sqm'], df1['subway_dist_to_center'], df1['dist_to_subway'], df1['footage'],
          df1['house_age']])
@@ -96,7 +96,7 @@ with st.echo(code_location='below'):
         index += 1
     plt.tight_layout(pad=0.6, w_pad=0.7, h_pad=6.0)
     st.pyplot(fig)
-    """Посмотрим как наши апартаменты распределены на карте москвы\n
+    """Посмотрим как наши апартаменты распределены на карте Москвы\n
     """
     fig = plt.figure(figsize=(32,22))
     sns.jointplot(x=df1.lat.values, y=df1.lon.values, size=10, color='turquoise')
@@ -111,7 +111,7 @@ with st.echo(code_location='below'):
     sns.heatmap(df_small.corr().abs(), annot=True, color='turquoise')
     st.pyplot(fig)
     """
-    Нас интересует от чего зависит цена на квадратный  метод\n
+    Нас интересует от чего зависит цена на квадратный метр\n
     Видим значительную положительную зависимость между ценой за квадратный метр и расстоянием до центра\n
     Зависимость между ценой и расстоянием до метро так же положительная, но не такая сильаня\n
     Построим Scatter polts для цены и показателей, которые могу на нее влиять, чтобы посмотреть на зависимость
@@ -120,7 +120,7 @@ with st.echo(code_location='below'):
     """
     Код для этих графиков очень перегружает Strimlit,поэтому его можно посмотреть в ноутбуке
     """
-    st.header("Агригируем данные")
+    st.header("Агрегируем данные")
     """
     Посмотри теперь на средние значения цены для всех административных оругов
     """
@@ -207,7 +207,7 @@ with st.echo(code_location='below'):
     st.pyplot(fig)
     #ENDFROM
     """
-    Теперь мы можем сделать вывод, что цена зависит от расстояния до школы - чем дальше школа, тем ниже цена
+    Теперь мы можем сделать вывод, что цена зависит от расстояния до школы - чем дальше школа, тем ниже цена за квадратный метр
     """
 
 
