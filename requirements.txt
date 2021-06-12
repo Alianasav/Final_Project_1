@@ -1,3 +1,9 @@
+pandas==1.2.4
+geopandas==0.9.0
 numpy==1.19.5
+seaborn==0.11.1
 matplotlib==3.3.4
+requests==2.25.1
+Shapely==1.7.1
 streamlit==0.79.0
+
